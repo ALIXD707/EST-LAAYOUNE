@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroNotes - Professional Notebook</title>
+    <meta name="description" content="A professional, sleek notebook application for your daily thoughts and tasks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1><i class="fa-solid fa-book-journal-whills"></i> AeroNotes</h1>
+                <button id="new-note-btn" class="primary-btn" title="Create New Note">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search notes...">
+            </div>
+            <div class="notes-list" id="notes-list">
+                <!-- Notes will be injected here via JavaScript -->
+            </div>
+        </aside>
+        
+        <main class="editor-container">
+            <div class="editor-placeholder" id="editor-placeholder">
+                <div class="placeholder-content">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <h2>Select a note or create a new one</h2>
+                    <p>Capture your thoughts in a beautiful, distraction-free environment.</p>
+                </div>
+            </div>
+            
+            <div class="editor hidden" id="editor-active">
+                <div class="editor-header">
+                    <input type="text" id="note-title" class="note-title-input" placeholder="Note Title...">
+                    <div class="editor-actions">
+                        <span id="save-status" class="save-status">Saved</span>
+                        <button id="delete-note-btn" class="icon-btn danger" title="Delete Note">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-body">
+                    <textarea id="note-body" class="note-body-input" placeholder="Start typing your brilliance here..."></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
